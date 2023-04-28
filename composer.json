@@ -1,0 +1,29 @@
+{
+    "name": "magento-services/centralized-patcher-composer-plugin",
+    "description": "Centralized patcher composer plugin to apply quality patches from the centralized patcher",
+    "type": "composer-plugin",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "symfony/process": "^4.1 || ^5.1",
+        "magento/magento-cloud-patches": "~1.0.20",
+        "magento/framework": "~103.0.5-p1",
+        "composer-plugin-api": "^2.0"
+    },
+    "require-dev": {
+        "composer/composer": "^2.0"
+    },
+    "suggest": {
+        "magento-services/centralized-patcher": "~0.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "MagentoServices\\CentralizedPatcherComposerPlugin\\": ""
+        }
+    },
+    "extra": {
+        "class": "MagentoServices\\CentralizedPatcherComposerPlugin\\Patcher"
+    }
+}
